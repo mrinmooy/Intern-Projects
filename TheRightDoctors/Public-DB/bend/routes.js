@@ -60,7 +60,7 @@ router.put('/api/person/:id', async (req, res) => {
 
     try {
         var existingPerson = await Person.findOne({ phone: phone });
-        if (existingPerson && existingPerson._id!==id) {
+        if (existingPerson && existingPerson._id.toString()!==id) {
             return res.status(400).json({
                 error: "A person with this phone number already exists"
             });
