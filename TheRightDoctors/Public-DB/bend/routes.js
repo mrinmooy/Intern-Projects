@@ -66,7 +66,7 @@ router.put('/api/person/:id', async (req, res) => {
             });
         }
         var existingPerson = await Person.findOne({ _id: id });
-        if (existingPerson) {
+        if (!existingPerson) {
             return res.status(404).json({
                 error: "Person not found"
             });
