@@ -23,7 +23,7 @@ export class CreateOneComponent {
       phone: formData.get('phone') as string,
     };
     
-    this.http.post('http://localhost:5005/api/person', personData, {observe: 'response' }).subscribe({
+    this.http.post('https://public-db-api.onrender.com/api/person', personData, {observe: 'response' }).subscribe({
       next: (response) => {
         // console.log(response);
        

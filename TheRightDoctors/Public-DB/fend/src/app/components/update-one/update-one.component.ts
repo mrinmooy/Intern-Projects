@@ -25,7 +25,7 @@ export class UpdateOneComponent {
       phone: formData.get('phone') as string
     };
 
-    this.http.put(`http://localhost:5005/api/person/${personId}`, personData, {observe: 'response' }).subscribe({
+    this.http.put(`https://public-db-api.onrender.com/api/person/${personId}`, personData, {observe: 'response' }).subscribe({
       next: (response) => {
       
         alert('Entry updated successfully');

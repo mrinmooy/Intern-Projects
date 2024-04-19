@@ -20,7 +20,7 @@ export class ViewALLComponent implements OnInit {
   }
 
   fetchPersons(): void {
-    this.http.get('http://localhost:5005/api/person').subscribe(
+    this.http.get('https://public-db-api.onrender.com/api/person').subscribe(
       (response) => {
         this.persons = response;
         // console.log(this.persons); 

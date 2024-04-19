@@ -16,7 +16,7 @@ export class DeleteOneComponent {
     const form = (event.target as HTMLFormElement);
     var personId = (document.getElementById('personId') as HTMLInputElement).value;
     if (personId) {
-      this.http.delete(`http://localhost:5005/api/person/${personId}`)
+      this.http.delete(`https://public-db-api.onrender.com/api/person/${personId}`)
         .subscribe({
           next: (response: any) => {
             // console.log('Person deleted successfully:', response);
