@@ -1,0 +1,30 @@
+<div>
+    <h1>Everyone's Details</h1><hr>
+    <div *ngIf="loading" class="d-flex justify-content-center">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only"></span>
+        </div>
+    </div>
+    <div *ngIf="!loading">
+    <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="border-bottom: 3px solid #ddd">
+                <th style="border-right: 3px solid #ddd;">ID</th>
+                <th style="border-right: 3px solid #ddd;">Name</th>
+                <th style="border-right: 3px solid #ddd;">Age</th>
+                <th style="border-right: 3px solid #ddd;">Gender</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of persons" style="border-bottom: 3px solid #ddd">
+                <td style="border-right: 3px solid #ddd;">{{ person._id }}</td>
+                <td style="border-right: 3px solid #ddd;">{{ person.name }}</td>
+                <td style="border-right: 3px solid #ddd;">{{ person.age }}</td>
+                <td style="border-right: 3px solid #ddd;">{{ person.gender }}</td>
+                <td>{{ person.phone }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

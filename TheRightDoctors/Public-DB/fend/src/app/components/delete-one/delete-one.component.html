@@ -1,0 +1,24 @@
+<h1>Delete an existing entry:</h1>
+<hr>
+<style>
+  .form-container-delete {
+    border: 2px solid #ccc;
+    padding: 20px;
+    width: 40%; 
+    min-width: 350px; 
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 20px; 
+  }
+  .form-group-delete {
+    display: contents;
+  }
+</style>
+<form autocomplete="off" (submit)="deletePersonById($event); $event.preventDefault()" class="form-container-delete">
+  <div class="form-group-delete">
+    <label for="personId">ID:</label>
+    <input type="text" id="personId" name="personId" required>
+  </div>
+  <button type="submit" style="grid-column: 1 / -1;">Delete</button>
+</form>

@@ -1,0 +1,47 @@
+<h1>Update an existing entry:</h1>
+<hr>
+<style>
+  .form-container {
+    border: 2px solid #ccc;
+    padding: 20px;
+    width: 40%; 
+    min-width: 350px; 
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 20px; 
+  }
+  .form-group {
+    display: contents; 
+  }
+</style>
+<form autocomplete="off" (submit)="updatePersonForm($event); $event.preventDefault()" class="form-container">
+  <div class="form-group">
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" required>
+  </div>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+  </div>
+  <div class="form-group">
+    <label for="sex">Sex:</label>
+    <select id="sex" name="sex" required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+    <div style="grid-column: 2;  margin-top: 5px;">
+      (Enter only 10 digit number)
+    </div>
+  </div>
+  <button type="submit" style="grid-column: 1 / -1;">Update</button>
+</form>
